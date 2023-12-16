@@ -1,3 +1,0 @@
-/home/joey/dev/gamedev/mario_clone/CMakeFiles/game.dir
-/home/joey/dev/gamedev/mario_clone/CMakeFiles/edit_cache.dir
-/home/joey/dev/gamedev/mario_clone/CMakeFiles/rebuild_cache.dir
