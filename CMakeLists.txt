@@ -1,19 +1,27 @@
 cmake_minimum_required(VERSION 3.22)
 
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 project(mario_clone)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build)
 
-find_package(SDL2 REQUIRED)
-include_directories(${SDL2_INCLUDE_DIRS})
-
 file (GLOB SOURCES "src/*.cpp")
 
 if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
-    set(output_name "game.exe")
-else()
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static")   
+    include_directories(${CMAKE_SOURCE_DIR}/include ${CMAKE_SOURCE_DIR}/SDL2/include)
     set(output_name "game")
+    add_executable(${output_name} ${SOURCES})
+    file(GLOB SDL2_LIBRARIES "${CMAKE_SOURCE_DIR}/SDL2/lib/*.a" "${CMAKE_SOURCE_DIR}/SDL2/lib/*.dll.a")
+    target_link_libraries(${output_name} ${SDL2_LIBRARIES} winmm setupapi hid imm32 version)
+    add_compile_options(-mconsole)
+else()
+    find_package(SDL2 REQUIRED)
+    include_directories(${SDL2_INCLUDE_DIRS})
+    set(output_name "game")
+    add_executable(${output_name} ${SOURCES})
+    target_link_libraries(${output_name} ${SDL2_LIBRARIES})
 endif()
-
-add_executable(${output_name} ${SOURCES})
-target_link_libraries(${output_name} ${SDL2_LIBRARIES})

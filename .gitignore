@@ -48,6 +48,10 @@ Makefile.in
 # Build directory
 /build
 
+# Include libraries
+/SDL2
+/include
+
 /.idea
 /.vscode
 

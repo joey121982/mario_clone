@@ -1,6 +1,10 @@
 #ifndef DEFINITIONS_HPP
 #define DEFINITIONS_HPP
 
+#ifdef _WIN32
+#define SDL_MAIN_HANDLED
+#endif
+
 #include <SDL2/SDL.h>
 #include <iostream>
 #include <vector>
