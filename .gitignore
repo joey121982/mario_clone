@@ -31,5 +31,20 @@
 *.out
 *.app
 
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+Makefile
+Makefile.in
+
+# Build directory
 /build
 
