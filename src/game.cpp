@@ -60,10 +60,10 @@ void MarioClone::Game::init(const char* title, int xpos, int ypos, int width, in
     float platformStartHeight = GAME_HEIGHT - GAME_HEIGHT/10;
     float platformStartWidth = 0;
 
-    while (platformStartHeight>0)
+    while (platformStartHeight > 0)
     {
-        platformList.push_back(Platform(platformStartWidth,platformStartHeight, GAME_WIDTH - 2*platformStartWidth - 69, GAME_HEIGHT/10));
-        platformStartHeight -= GAME_HEIGHT/10;
+        platformList.push_back(Platform(platformStartWidth, platformStartHeight, GAME_WIDTH - 2 * platformStartWidth - 69, GAME_HEIGHT / 10));
+        platformStartHeight -= GAME_HEIGHT / 10;
         platformStartWidth += 100;
     }
 }
@@ -76,4 +76,7 @@ void MarioClone::Game::clean()
     std::cout << "Game cleaned!" << std::endl;
 }
 
-bool MarioClone::Game::running() { return isRunning; }
+bool MarioClone::Game::running() 
+{ 
+    return isRunning;
+}
