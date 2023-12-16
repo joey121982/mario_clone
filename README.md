@@ -1,4 +1,4 @@
-# Mario Clone by [@joey12198](https://github.com/joey121982/) and [@Baron](https://github.com/)
+# Mario Clone by [@joey12198](https://github.com/joey121982/) and [@cosminbrn](https://github.com/cosminbrn)
 
 ## Prerequisites
 
@@ -54,3 +54,8 @@ After doing this you have two options to compile:
 For now, the controls are not customizable.
 * A or LEFT ARROW / W or RIGHT ARROW - runs left / right
 * SPACE / W / UP ARROW - jumps
+
+
+
+
+
