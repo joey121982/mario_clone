@@ -1,4 +1,4 @@
-# Mario Clone by [@joey12198](https://github.com/joey121982/) and Baron
+# Mario Clone by [@joey12198](https://github.com/joey121982/) and [@Baron](https://github.com/)
 
 ## Prerequisites
 
