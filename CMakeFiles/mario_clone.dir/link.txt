@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/mario_clone.dir/src/main.cpp.o CMakeFiles/mario_clone.dir/src/game.cpp.o -o mario_clone  -L/usr/lib/x86_64-linux-gnu  -lSDL2 
