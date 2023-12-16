@@ -10,7 +10,7 @@ include_directories(${SDL2_INCLUDE_DIRS})
 file (GLOB SOURCES "src/*.cpp")
 
 if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
-    set(output_name "game.exe")
+    set(output_name "game")
 else()
     set(output_name "game")
 endif()
