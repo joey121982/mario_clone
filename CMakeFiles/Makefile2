@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/joey/dev/gamedev/mario_clone
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/mario_clone.dir/all
+all: CMakeFiles/game.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/mario_clone.dir/clean
+clean: CMakeFiles/game.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/mario_clone.dir
+# Target rules for target CMakeFiles/game.dir
 
 # All Build rule for target.
-CMakeFiles/mario_clone.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joey/dev/gamedev/mario_clone/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target mario_clone"
-.PHONY : CMakeFiles/mario_clone.dir/all
+CMakeFiles/game.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joey/dev/gamedev/mario_clone/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target game"
+.PHONY : CMakeFiles/game.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/mario_clone.dir/rule: cmake_check_build_system
+CMakeFiles/game.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joey/dev/gamedev/mario_clone/CMakeFiles 7
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mario_clone.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/game.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joey/dev/gamedev/mario_clone/CMakeFiles 0
-.PHONY : CMakeFiles/mario_clone.dir/rule
+.PHONY : CMakeFiles/game.dir/rule
 
 # Convenience name for target.
-mario_clone: CMakeFiles/mario_clone.dir/rule
-.PHONY : mario_clone
+game: CMakeFiles/game.dir/rule
+.PHONY : game
 
 # clean rule for target.
-CMakeFiles/mario_clone.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/clean
-.PHONY : CMakeFiles/mario_clone.dir/clean
+CMakeFiles/game.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/clean
+.PHONY : CMakeFiles/game.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

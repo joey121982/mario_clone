@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named mario_clone
+# Target rules for targets named game
 
 # Build rule for target.
-mario_clone: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mario_clone
-.PHONY : mario_clone
+game: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game
+.PHONY : game
 
 # fast build rule for target.
-mario_clone/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/build
-.PHONY : mario_clone/fast
+game/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
+.PHONY : game/fast
 
 src/events.o: src/events.cpp.o
 .PHONY : src/events.o
 
 # target to build an object file
 src/events.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/events.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/events.cpp.o
 .PHONY : src/events.cpp.o
 
 src/events.i: src/events.cpp.i
@@ -142,7 +142,7 @@ src/events.i: src/events.cpp.i
 
 # target to preprocess a source file
 src/events.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/events.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/events.cpp.i
 .PHONY : src/events.cpp.i
 
 src/events.s: src/events.cpp.s
@@ -150,7 +150,7 @@ src/events.s: src/events.cpp.s
 
 # target to generate assembly for a file
 src/events.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/events.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/events.cpp.s
 .PHONY : src/events.cpp.s
 
 src/game.o: src/game.cpp.o
@@ -158,7 +158,7 @@ src/game.o: src/game.cpp.o
 
 # target to build an object file
 src/game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/game.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game.cpp.o
 .PHONY : src/game.cpp.o
 
 src/game.i: src/game.cpp.i
@@ -166,7 +166,7 @@ src/game.i: src/game.cpp.i
 
 # target to preprocess a source file
 src/game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/game.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game.cpp.i
 .PHONY : src/game.cpp.i
 
 src/game.s: src/game.cpp.s
@@ -174,7 +174,7 @@ src/game.s: src/game.cpp.s
 
 # target to generate assembly for a file
 src/game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/game.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game.cpp.s
 .PHONY : src/game.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -182,7 +182,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -190,7 +190,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -198,7 +198,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/player.o: src/player.cpp.o
@@ -206,7 +206,7 @@ src/player.o: src/player.cpp.o
 
 # target to build an object file
 src/player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/player.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/player.cpp.o
 .PHONY : src/player.cpp.o
 
 src/player.i: src/player.cpp.i
@@ -214,7 +214,7 @@ src/player.i: src/player.cpp.i
 
 # target to preprocess a source file
 src/player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/player.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/player.cpp.i
 .PHONY : src/player.cpp.i
 
 src/player.s: src/player.cpp.s
@@ -222,7 +222,7 @@ src/player.s: src/player.cpp.s
 
 # target to generate assembly for a file
 src/player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/player.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/player.cpp.s
 .PHONY : src/player.cpp.s
 
 src/render.o: src/render.cpp.o
@@ -230,7 +230,7 @@ src/render.o: src/render.cpp.o
 
 # target to build an object file
 src/render.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/render.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/render.cpp.o
 .PHONY : src/render.cpp.o
 
 src/render.i: src/render.cpp.i
@@ -238,7 +238,7 @@ src/render.i: src/render.cpp.i
 
 # target to preprocess a source file
 src/render.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/render.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/render.cpp.i
 .PHONY : src/render.cpp.i
 
 src/render.s: src/render.cpp.s
@@ -246,7 +246,7 @@ src/render.s: src/render.cpp.s
 
 # target to generate assembly for a file
 src/render.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/render.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/render.cpp.s
 .PHONY : src/render.cpp.s
 
 src/update.o: src/update.cpp.o
@@ -254,7 +254,7 @@ src/update.o: src/update.cpp.o
 
 # target to build an object file
 src/update.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/update.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/update.cpp.o
 .PHONY : src/update.cpp.o
 
 src/update.i: src/update.cpp.i
@@ -262,7 +262,7 @@ src/update.i: src/update.cpp.i
 
 # target to preprocess a source file
 src/update.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/update.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/update.cpp.i
 .PHONY : src/update.cpp.i
 
 src/update.s: src/update.cpp.s
@@ -270,7 +270,7 @@ src/update.s: src/update.cpp.s
 
 # target to generate assembly for a file
 src/update.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/update.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/update.cpp.s
 .PHONY : src/update.cpp.s
 
 # Help Target
@@ -281,7 +281,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... mario_clone"
+	@echo "... game"
 	@echo "... src/events.o"
 	@echo "... src/events.i"
 	@echo "... src/events.s"
