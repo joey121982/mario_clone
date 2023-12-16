@@ -7,13 +7,17 @@
 
 #include <SDL2/SDL.h>
 #include <iostream>
+#include <fstream>
 #include <vector>
+#include <string>
 #include "utilities.hpp"
 
-const int     GAME_WIDTH        = 1920;
-const int     GAME_HEIGHT       = 1080;
-const float   PLAYER_WIDTH      = 45;
-const float   PLAYER_HEIGHT     = 90;
+const int           GAME_WIDTH      = 1920;
+const int           GAME_HEIGHT     = 1080;
+const float         PLAYER_WIDTH    = 45;
+const float         PLAYER_HEIGHT   = 90;
+const std::string   ASSET_PATH      = "assets/";
+
 
 namespace MarioClone
 {
