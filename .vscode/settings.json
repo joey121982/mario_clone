@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "atomic": "cpp",
-        "*.tcc": "cpp",
-        "cstdint": "cpp",
-        "random": "cpp"
-    }
-}
