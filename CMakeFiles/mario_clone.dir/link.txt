@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/mario_clone.dir/src/main.cpp.o CMakeFiles/mario_clone.dir/src/game.cpp.o -o mario_clone  -L/usr/lib/x86_64-linux-gnu  -lSDL2 
+/usr/bin/c++ CMakeFiles/mario_clone.dir/src/events.cpp.o CMakeFiles/mario_clone.dir/src/game.cpp.o CMakeFiles/mario_clone.dir/src/main.cpp.o CMakeFiles/mario_clone.dir/src/player.cpp.o CMakeFiles/mario_clone.dir/src/render.cpp.o CMakeFiles/mario_clone.dir/src/update.cpp.o -o mario_clone  -L/usr/lib/x86_64-linux-gnu  -lSDL2 

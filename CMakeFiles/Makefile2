@@ -81,12 +81,12 @@ clean: CMakeFiles/mario_clone.dir/clean
 CMakeFiles/mario_clone.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joey/dev/gamedev/mario_clone/CMakeFiles --progress-num=1,2,3 "Built target mario_clone"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joey/dev/gamedev/mario_clone/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target mario_clone"
 .PHONY : CMakeFiles/mario_clone.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mario_clone.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joey/dev/gamedev/mario_clone/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joey/dev/gamedev/mario_clone/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mario_clone.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joey/dev/gamedev/mario_clone/CMakeFiles 0
 .PHONY : CMakeFiles/mario_clone.dir/rule

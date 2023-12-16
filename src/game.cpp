@@ -1,4 +1,4 @@
-#include "game.hpp"
+#include "definitions.hpp"
 #include <iostream>
 
 MarioClone::Game::Game()
@@ -28,12 +28,20 @@ void MarioClone::Game::init(const char* title, int xpos, int ypos, int width, in
         {
             std::cout << "Window created!" << std::endl;
         }
+        else
+        {
+            std::cerr << "Window failed to create with the following error: "<< SDL_GetError() << std::endl;
+        }
 
         renderer = SDL_CreateRenderer(window, -1, 0);
         if (renderer)
         {
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
             std::cout << "Renderer created!" << std::endl;
+        }
+        else
+        {
+            std::cerr << "Renderer failed to create with the following error: "<< SDL_GetError() << std::endl;
         }
 
         isRunning = true;
@@ -44,32 +52,6 @@ void MarioClone::Game::init(const char* title, int xpos, int ypos, int width, in
     }
 }
 
-void MarioClone::Game::handleEvents()
-{
-    SDL_Event event;
-    SDL_PollEvent(&event);
-    switch (event.type)
-    {
-    case SDL_QUIT:
-        isRunning = false;
-        break;
-
-    default:
-        break;
-    }
-}
-
-void MarioClone::Game::update()
-{
-}
-
-void MarioClone::Game::render()
-{
-    SDL_RenderClear(renderer);
-    // This is where we would add stuff to render.
-    SDL_RenderPresent(renderer);
-}
-
 void MarioClone::Game::clean()
 {
     SDL_DestroyWindow(window);
@@ -77,6 +59,5 @@ void MarioClone::Game::clean()
     SDL_Quit();
     std::cout << "Game cleaned!" << std::endl;
 }
-
 
 bool MarioClone::Game::running() { return isRunning; }

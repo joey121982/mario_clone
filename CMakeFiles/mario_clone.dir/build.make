@@ -69,19 +69,19 @@ include CMakeFiles/mario_clone.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/mario_clone.dir/flags.make
 
-CMakeFiles/mario_clone.dir/src/main.cpp.o: CMakeFiles/mario_clone.dir/flags.make
-CMakeFiles/mario_clone.dir/src/main.cpp.o: src/main.cpp
-CMakeFiles/mario_clone.dir/src/main.cpp.o: CMakeFiles/mario_clone.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joey/dev/gamedev/mario_clone/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mario_clone.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_clone.dir/src/main.cpp.o -MF CMakeFiles/mario_clone.dir/src/main.cpp.o.d -o CMakeFiles/mario_clone.dir/src/main.cpp.o -c /home/joey/dev/gamedev/mario_clone/src/main.cpp
+CMakeFiles/mario_clone.dir/src/events.cpp.o: CMakeFiles/mario_clone.dir/flags.make
+CMakeFiles/mario_clone.dir/src/events.cpp.o: src/events.cpp
+CMakeFiles/mario_clone.dir/src/events.cpp.o: CMakeFiles/mario_clone.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joey/dev/gamedev/mario_clone/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mario_clone.dir/src/events.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_clone.dir/src/events.cpp.o -MF CMakeFiles/mario_clone.dir/src/events.cpp.o.d -o CMakeFiles/mario_clone.dir/src/events.cpp.o -c /home/joey/dev/gamedev/mario_clone/src/events.cpp
 
-CMakeFiles/mario_clone.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mario_clone.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joey/dev/gamedev/mario_clone/src/main.cpp > CMakeFiles/mario_clone.dir/src/main.cpp.i
+CMakeFiles/mario_clone.dir/src/events.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mario_clone.dir/src/events.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joey/dev/gamedev/mario_clone/src/events.cpp > CMakeFiles/mario_clone.dir/src/events.cpp.i
 
-CMakeFiles/mario_clone.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mario_clone.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joey/dev/gamedev/mario_clone/src/main.cpp -o CMakeFiles/mario_clone.dir/src/main.cpp.s
+CMakeFiles/mario_clone.dir/src/events.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mario_clone.dir/src/events.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joey/dev/gamedev/mario_clone/src/events.cpp -o CMakeFiles/mario_clone.dir/src/events.cpp.s
 
 CMakeFiles/mario_clone.dir/src/game.cpp.o: CMakeFiles/mario_clone.dir/flags.make
 CMakeFiles/mario_clone.dir/src/game.cpp.o: src/game.cpp
@@ -97,19 +97,83 @@ CMakeFiles/mario_clone.dir/src/game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mario_clone.dir/src/game.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joey/dev/gamedev/mario_clone/src/game.cpp -o CMakeFiles/mario_clone.dir/src/game.cpp.s
 
+CMakeFiles/mario_clone.dir/src/main.cpp.o: CMakeFiles/mario_clone.dir/flags.make
+CMakeFiles/mario_clone.dir/src/main.cpp.o: src/main.cpp
+CMakeFiles/mario_clone.dir/src/main.cpp.o: CMakeFiles/mario_clone.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joey/dev/gamedev/mario_clone/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mario_clone.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_clone.dir/src/main.cpp.o -MF CMakeFiles/mario_clone.dir/src/main.cpp.o.d -o CMakeFiles/mario_clone.dir/src/main.cpp.o -c /home/joey/dev/gamedev/mario_clone/src/main.cpp
+
+CMakeFiles/mario_clone.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mario_clone.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joey/dev/gamedev/mario_clone/src/main.cpp > CMakeFiles/mario_clone.dir/src/main.cpp.i
+
+CMakeFiles/mario_clone.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mario_clone.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joey/dev/gamedev/mario_clone/src/main.cpp -o CMakeFiles/mario_clone.dir/src/main.cpp.s
+
+CMakeFiles/mario_clone.dir/src/player.cpp.o: CMakeFiles/mario_clone.dir/flags.make
+CMakeFiles/mario_clone.dir/src/player.cpp.o: src/player.cpp
+CMakeFiles/mario_clone.dir/src/player.cpp.o: CMakeFiles/mario_clone.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joey/dev/gamedev/mario_clone/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mario_clone.dir/src/player.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_clone.dir/src/player.cpp.o -MF CMakeFiles/mario_clone.dir/src/player.cpp.o.d -o CMakeFiles/mario_clone.dir/src/player.cpp.o -c /home/joey/dev/gamedev/mario_clone/src/player.cpp
+
+CMakeFiles/mario_clone.dir/src/player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mario_clone.dir/src/player.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joey/dev/gamedev/mario_clone/src/player.cpp > CMakeFiles/mario_clone.dir/src/player.cpp.i
+
+CMakeFiles/mario_clone.dir/src/player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mario_clone.dir/src/player.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joey/dev/gamedev/mario_clone/src/player.cpp -o CMakeFiles/mario_clone.dir/src/player.cpp.s
+
+CMakeFiles/mario_clone.dir/src/render.cpp.o: CMakeFiles/mario_clone.dir/flags.make
+CMakeFiles/mario_clone.dir/src/render.cpp.o: src/render.cpp
+CMakeFiles/mario_clone.dir/src/render.cpp.o: CMakeFiles/mario_clone.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joey/dev/gamedev/mario_clone/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/mario_clone.dir/src/render.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_clone.dir/src/render.cpp.o -MF CMakeFiles/mario_clone.dir/src/render.cpp.o.d -o CMakeFiles/mario_clone.dir/src/render.cpp.o -c /home/joey/dev/gamedev/mario_clone/src/render.cpp
+
+CMakeFiles/mario_clone.dir/src/render.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mario_clone.dir/src/render.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joey/dev/gamedev/mario_clone/src/render.cpp > CMakeFiles/mario_clone.dir/src/render.cpp.i
+
+CMakeFiles/mario_clone.dir/src/render.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mario_clone.dir/src/render.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joey/dev/gamedev/mario_clone/src/render.cpp -o CMakeFiles/mario_clone.dir/src/render.cpp.s
+
+CMakeFiles/mario_clone.dir/src/update.cpp.o: CMakeFiles/mario_clone.dir/flags.make
+CMakeFiles/mario_clone.dir/src/update.cpp.o: src/update.cpp
+CMakeFiles/mario_clone.dir/src/update.cpp.o: CMakeFiles/mario_clone.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joey/dev/gamedev/mario_clone/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/mario_clone.dir/src/update.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mario_clone.dir/src/update.cpp.o -MF CMakeFiles/mario_clone.dir/src/update.cpp.o.d -o CMakeFiles/mario_clone.dir/src/update.cpp.o -c /home/joey/dev/gamedev/mario_clone/src/update.cpp
+
+CMakeFiles/mario_clone.dir/src/update.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mario_clone.dir/src/update.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joey/dev/gamedev/mario_clone/src/update.cpp > CMakeFiles/mario_clone.dir/src/update.cpp.i
+
+CMakeFiles/mario_clone.dir/src/update.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mario_clone.dir/src/update.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joey/dev/gamedev/mario_clone/src/update.cpp -o CMakeFiles/mario_clone.dir/src/update.cpp.s
+
 # Object files for target mario_clone
 mario_clone_OBJECTS = \
+"CMakeFiles/mario_clone.dir/src/events.cpp.o" \
+"CMakeFiles/mario_clone.dir/src/game.cpp.o" \
 "CMakeFiles/mario_clone.dir/src/main.cpp.o" \
-"CMakeFiles/mario_clone.dir/src/game.cpp.o"
+"CMakeFiles/mario_clone.dir/src/player.cpp.o" \
+"CMakeFiles/mario_clone.dir/src/render.cpp.o" \
+"CMakeFiles/mario_clone.dir/src/update.cpp.o"
 
 # External object files for target mario_clone
 mario_clone_EXTERNAL_OBJECTS =
 
-mario_clone: CMakeFiles/mario_clone.dir/src/main.cpp.o
+mario_clone: CMakeFiles/mario_clone.dir/src/events.cpp.o
 mario_clone: CMakeFiles/mario_clone.dir/src/game.cpp.o
+mario_clone: CMakeFiles/mario_clone.dir/src/main.cpp.o
+mario_clone: CMakeFiles/mario_clone.dir/src/player.cpp.o
+mario_clone: CMakeFiles/mario_clone.dir/src/render.cpp.o
+mario_clone: CMakeFiles/mario_clone.dir/src/update.cpp.o
 mario_clone: CMakeFiles/mario_clone.dir/build.make
 mario_clone: CMakeFiles/mario_clone.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/joey/dev/gamedev/mario_clone/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable mario_clone"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/joey/dev/gamedev/mario_clone/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable mario_clone"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mario_clone.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

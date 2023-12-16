@@ -129,6 +129,30 @@ mario_clone/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/build
 .PHONY : mario_clone/fast
 
+src/events.o: src/events.cpp.o
+.PHONY : src/events.o
+
+# target to build an object file
+src/events.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/events.cpp.o
+.PHONY : src/events.cpp.o
+
+src/events.i: src/events.cpp.i
+.PHONY : src/events.i
+
+# target to preprocess a source file
+src/events.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/events.cpp.i
+.PHONY : src/events.cpp.i
+
+src/events.s: src/events.cpp.s
+.PHONY : src/events.s
+
+# target to generate assembly for a file
+src/events.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/events.cpp.s
+.PHONY : src/events.cpp.s
+
 src/game.o: src/game.cpp.o
 .PHONY : src/game.o
 
@@ -177,6 +201,78 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/player.o: src/player.cpp.o
+.PHONY : src/player.o
+
+# target to build an object file
+src/player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/player.cpp.o
+.PHONY : src/player.cpp.o
+
+src/player.i: src/player.cpp.i
+.PHONY : src/player.i
+
+# target to preprocess a source file
+src/player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/player.cpp.i
+.PHONY : src/player.cpp.i
+
+src/player.s: src/player.cpp.s
+.PHONY : src/player.s
+
+# target to generate assembly for a file
+src/player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/player.cpp.s
+.PHONY : src/player.cpp.s
+
+src/render.o: src/render.cpp.o
+.PHONY : src/render.o
+
+# target to build an object file
+src/render.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/render.cpp.o
+.PHONY : src/render.cpp.o
+
+src/render.i: src/render.cpp.i
+.PHONY : src/render.i
+
+# target to preprocess a source file
+src/render.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/render.cpp.i
+.PHONY : src/render.cpp.i
+
+src/render.s: src/render.cpp.s
+.PHONY : src/render.s
+
+# target to generate assembly for a file
+src/render.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/render.cpp.s
+.PHONY : src/render.cpp.s
+
+src/update.o: src/update.cpp.o
+.PHONY : src/update.o
+
+# target to build an object file
+src/update.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/update.cpp.o
+.PHONY : src/update.cpp.o
+
+src/update.i: src/update.cpp.i
+.PHONY : src/update.i
+
+# target to preprocess a source file
+src/update.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/update.cpp.i
+.PHONY : src/update.cpp.i
+
+src/update.s: src/update.cpp.s
+.PHONY : src/update.s
+
+# target to generate assembly for a file
+src/update.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mario_clone.dir/build.make CMakeFiles/mario_clone.dir/src/update.cpp.s
+.PHONY : src/update.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +282,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mario_clone"
+	@echo "... src/events.o"
+	@echo "... src/events.i"
+	@echo "... src/events.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/player.o"
+	@echo "... src/player.i"
+	@echo "... src/player.s"
+	@echo "... src/render.o"
+	@echo "... src/render.i"
+	@echo "... src/render.s"
+	@echo "... src/update.o"
+	@echo "... src/update.i"
+	@echo "... src/update.s"
 .PHONY : help
 
 
