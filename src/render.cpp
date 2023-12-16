@@ -19,8 +19,8 @@ void MarioClone::Game::render()
     SDL_RenderFillRect(renderer, &playerRect);
 
     SDL_SetRenderDrawColor(renderer, 192, 192, 192, 255);
-    
-    for(Platform platform : platformList)
+
+    for(Platform &platform : platformList)
     {
         SDL_Rect platformRect;
         platformRect.x = platform.position.x * screensizeadjust;

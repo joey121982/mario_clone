@@ -1,5 +1,10 @@
 # Mario Clone by [@joey12198](https://github.com/joey121982/)
 
+### Prerequisites:
+
+To be able to build this project, you will need to install
+``` cmake ```, ``` SDL2 ```
+
 ### How to Build With Script:
 
 Simply just run ``` ./build.sh ``` in the root folder, the script will do the rest for you. 

@@ -48,5 +48,6 @@ Makefile.in
 # Build directory
 /build
 
+/.idea
 /.vscode
 
