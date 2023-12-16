@@ -19,15 +19,15 @@ void MarioClone::Game::handleEvents()
     const uint8_t *currentKeyStates = SDL_GetKeyboardState( NULL );
     if (currentKeyStates[SDL_SCANCODE_LEFT] || currentKeyStates[SDL_SCANCODE_A])
     {
-        player.move(LEFT, PLAYER_SPEED);
+        player.move(LEFT, PLAYER_SPEED * deltaTime);
     }
     if (currentKeyStates[SDL_SCANCODE_RIGHT] || currentKeyStates[SDL_SCANCODE_D])
     {
-        player.move(RIGHT, PLAYER_SPEED);
+        player.move(RIGHT, PLAYER_SPEED * deltaTime);
     }
     if (currentKeyStates[SDL_SCANCODE_SPACE] || currentKeyStates[SDL_SCANCODE_UP] || currentKeyStates[SDL_SCANCODE_W])
     {
-        if(player.onGround())
+        if(player.grounded)
             player.jump(PLAYER_SPEED);
     }
 }

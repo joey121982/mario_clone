@@ -1,6 +1,6 @@
 #include "definitions.hpp"
 
-void MarioClone::Player::move(Orientation dir, int speed)
+void MarioClone::Player::move(Orientation dir, float speed)
 {
     orientation = dir;
     if (dir == LEFT)
@@ -13,15 +13,15 @@ void MarioClone::Player::move(Orientation dir, int speed)
     }
 }
 
-void MarioClone::Player::jump(int speed)
+void MarioClone::Player::jump(float speed)
 {
-    verticalVelocity = -speed;
+    verticalVelocity = -speed * 1.5;
     grounded = false;   
 }
 
-bool MarioClone::Player::onGround()
+SDL_Rect MarioClone::Player::getRect()
 {
-    return grounded;
+    return playerRect;
 }
 
 MarioClone::Player::Player()

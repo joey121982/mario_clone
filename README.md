@@ -1,6 +1,11 @@
-# Mario Clone
+# Mario Clone by [[https://github.com/joey121982/|@joey12198]]
 
-### How to Build:
+### How to Build With Script:
+
+Simply just run ``` ./build.sh ``` in the root folder, the script will do the rest for you. 
+(at the end will ask if you want to run the game, if something went wrong, please enter "n")
+
+### How to Build Manually:
 <br>
 in your terminal, from the root of the project, run
 

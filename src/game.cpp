@@ -36,7 +36,6 @@ void MarioClone::Game::init(const char* title, int xpos, int ypos, int width, in
         renderer = SDL_CreateRenderer(window, -1, 0);
         if (renderer)
         {
-            SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
             std::cout << "Renderer created!" << std::endl;
         }
         else
@@ -52,12 +51,11 @@ void MarioClone::Game::init(const char* title, int xpos, int ypos, int width, in
     }
 
     player.position.x = 0;
-    player.position.y = 0;
-    GRAVITY = 0.1 * ((float)height / 720);
-    PLAYER_SPEED = 5 * ((float)width / 1280);
-    PLAYER_WIDTH = 32 * ((float)width / 1280);
-    PLAYER_HEIGHT = 32 * ((float)height / 720);
+    player.position.y = 300;
+    
+    screensizeadjust = (float)width / GAME_WIDTH; // referenced in render.cpp
 
+    platformList.push_back(Platform());
 }
 
 void MarioClone::Game::clean()

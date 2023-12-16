@@ -3,10 +3,17 @@
 int main(int argc, char* argv[])
 {
     uint32_t frameStart;
-    int frameTime;
+
+
+    int     screenwidth     = 1600;
+    int     screenheight    = 900;
+    bool    fullscreen      = false;
+
+    // int         FPS         = 120;
+    // const int   frameDelay  = 1000 / FPS;
 
     MarioClone::Game game = MarioClone::Game();
-    game.init("Mario Clone", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 2560, 1440, true);
+    game.init("Mario Clone", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, screenwidth, screenheight, fullscreen);
 
     while(game.running())
     {
@@ -16,12 +23,13 @@ int main(int argc, char* argv[])
         game.update();
         game.render();
 
-        frameTime = SDL_GetTicks() - frameStart;
+        game.deltaTime = SDL_GetTicks() - frameStart;
 
-        if(frameDelay > frameTime)
-        {
-            SDL_Delay(frameDelay - frameTime);
-        }
+        // Replaced by using deltaTime for movement and gravity
+        // if(frameDelay > game.deltaTime)
+        // {
+        //     SDL_Delay(frameDelay - game.deltaTime);
+        // }
     }
 
     return 0;
