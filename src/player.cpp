@@ -1,21 +1,21 @@
 #include "definitions.hpp"
 
-void MarioClone::Player::move(Orientation dir)
+void MarioClone::Player::move(Orientation dir, int speed)
 {
     orientation = dir;
     if (dir == LEFT)
     {
-        position.x -= PLAYER_SPEED;
+        position.x -= speed;
     }
     else if (dir == RIGHT)
     {
-        position.x += PLAYER_SPEED;
+        position.x += speed;
     }
 }
 
-void MarioClone::Player::jump()
+void MarioClone::Player::jump(int speed)
 {
-    verticalVelocity = -5;
+    verticalVelocity = -speed;
     grounded = false;   
 }
 

@@ -6,7 +6,7 @@ int main(int argc, char* argv[])
     int frameTime;
 
     MarioClone::Game game = MarioClone::Game();
-    game.init("Mario Clone", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, false);
+    game.init("Mario Clone", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 2560, 1440, true);
 
     while(game.running())
     {

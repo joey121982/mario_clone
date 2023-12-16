@@ -50,6 +50,14 @@ void MarioClone::Game::init(const char* title, int xpos, int ypos, int width, in
     {
         isRunning = false;
     }
+
+    player.position.x = 0;
+    player.position.y = 0;
+    GRAVITY = 0.1 * ((float)height / 720);
+    PLAYER_SPEED = 5 * ((float)width / 1280);
+    PLAYER_WIDTH = 32 * ((float)width / 1280);
+    PLAYER_HEIGHT = 32 * ((float)height / 720);
+
 }
 
 void MarioClone::Game::clean()

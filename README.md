@@ -1,4 +1,4 @@
-# mario_clone
+# Mario Clone
 
 ### How to Build:
 <br>
