@@ -60,6 +60,8 @@ void MarioClone::Game::init(const char* title, int xpos, int ypos, int width, in
     float platformStartHeight = GAME_HEIGHT - GAME_HEIGHT/10;
     float platformStartWidth = 0;
 
+    platformList.push_back(Platform(-400, GAME_HEIGHT, 300, GAME_HEIGHT / 10));
+
     while (platformStartHeight > 0)
     {
         platformList.push_back(Platform(platformStartWidth, platformStartHeight, GAME_WIDTH - 2 * platformStartWidth - 69, GAME_HEIGHT / 10));
