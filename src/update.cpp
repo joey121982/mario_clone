@@ -1,5 +1,15 @@
 #include "definitions.hpp"
 
+bool isInLine(SDL_Rect a, SDL_Rect b)
+{
+    int marginoferror = 4;
+    if(a.x + a.w < b.x + marginoferror)
+        return false;
+    if(a.x + marginoferror > b.x + b.w)
+        return false;
+    return true;
+}
+
 void MarioClone::Game::update()
 {
     player.grounded = false;
@@ -11,22 +21,35 @@ void MarioClone::Game::update()
     playerRect.w = PLAYER_WIDTH;
     playerRect.h = PLAYER_HEIGHT;
 
-    int i = 0;
-    for (Platform &platform : platformList)
+    for (auto &objectRect : collisionObjects)
     {
-        SDL_Rect platformRect = platform.getRect();
-
-        platformRect.x = platform.position.x;
-        platformRect.y = platform.position.y;
-        platformRect.w = platform.width;
-        platformRect.h = platform.height;
-
-        if(Utilities::checkCollision(platformRect, playerRect))
+        if (Utilities::checkCollision(playerRect, objectRect))
         {
-            player.position.y       = platform.position.y - player.height;
-            player.verticalVelocity = 0;
-            player.grounded         = true;
-            break;
+            if (isInLine(objectRect, playerRect))
+            {
+                if (player.verticalVelocity > 0)
+                {
+                    player.position.y = objectRect.y - playerRect.h;
+                    player.verticalVelocity = 0;
+                    player.grounded = true;
+                }
+                else if (player.verticalVelocity < 0)
+                {
+                    player.position.y = objectRect.y + objectRect.h;
+                    player.verticalVelocity = 0;
+                }
+            }
+            else
+            {
+                if (player.position.x < objectRect.x)
+                {
+                    player.position.x = objectRect.x - playerRect.w;
+                }
+                else
+                {
+                    player.position.x = objectRect.x + objectRect.w;
+                }
+            }
         }
     }
     

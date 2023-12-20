@@ -18,18 +18,21 @@ void MarioClone::Game::render()
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
     SDL_RenderFillRect(renderer, &playerRect);
 
-    // Platforms are rendered relative to the player's position.
-    for (auto &platform : platformList)
+    // How to render relative to player position:
+    // platformRect.x = (platform.position.x - player.position.x + GAME_WIDTH / 2) * screensizeadjust;
+    // platformRect.y = (platform.position.y - player.position.y + GAME_HEIGHT / 2) * screensizeadjust;
+       
+    for(auto object : collisionObjects)
     {
-        SDL_Rect platformRect = platform.getRect();
-        // The player's position is subtracted from the platform's position to get the relative position.
-        platformRect.x = (platform.position.x - player.position.x + GAME_WIDTH / 2) * screensizeadjust;
-        platformRect.y = (platform.position.y - player.position.y + GAME_HEIGHT / 2) * screensizeadjust;
-        platformRect.w = platform.width * screensizeadjust;
-        platformRect.h = platform.height * screensizeadjust;
+        SDL_Rect objectRect;
+        objectRect.x = (object.x - player.position.x + GAME_WIDTH / 2) * screensizeadjust;
+        objectRect.y = (object.y - player.position.y + GAME_HEIGHT / 2) * screensizeadjust;
+        objectRect.w = TILEBOX_SIZE * screensizeadjust;
+        objectRect.h = TILEBOX_SIZE * screensizeadjust;
         SDL_SetRenderDrawColor(renderer, 200, 200, 200, 255);
-        SDL_RenderFillRect(renderer, &platformRect);
+        SDL_RenderFillRect(renderer, &objectRect);
     }
+    std::cout << player.position.x << " " << player.position.y << std::endl;
 
     SDL_RenderPresent(renderer);
 }
