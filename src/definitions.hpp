@@ -14,6 +14,7 @@
 
 const int           GAME_WIDTH      = 1920;
 const int           GAME_HEIGHT     = 1080;
+const int           TILEBOX_SIZE    = 100;
 const float         PLAYER_WIDTH    = 45;
 const float         PLAYER_HEIGHT   = 90;
 const std::string   ASSET_PATH      = "assets/";
@@ -42,27 +43,21 @@ namespace MarioClone
             float height = PLAYER_HEIGHT;
     };
 
-    class Platform
+    class Tilebox
     {
         private:
-            SDL_Rect platformRect;
+            SDL_Rect TileboxRect;
         public:
-            Platform();
-            Platform(float x, float y, float w, float h);
-            ~Platform();
+            Tilebox(float x, float y);
+            ~Tilebox();
             SDL_Rect getRect();
-
-            Vector2 position    = Vector2();
-            float width         = GAME_WIDTH;
-            float height        = GAME_HEIGHT;
+            Vector2 position;
     };
 
     class Game
     {
     private:
         void clean();
-
-        std::vector<Platform> platformList;
 
         float   screensizeadjust;
         bool    isRunning;
@@ -74,6 +69,7 @@ namespace MarioClone
         SDL_Renderer*   renderer;
 
         Player player = Player();
+        std::vector<SDL_Rect> collisionObjects;
 
     public:
         Game();

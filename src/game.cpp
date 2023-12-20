@@ -55,19 +55,17 @@ void MarioClone::Game::init(const char* title, int xpos, int ypos, int width, in
     
     screensizeadjust = (float)width / GAME_WIDTH; // referenced in render.cpp
 
-    
-    //platformList.push_back(Platform());
-    float platformStartHeight = GAME_HEIGHT - GAME_HEIGHT/10;
-    float platformStartWidth = 0;
+    // TODO: load map here
 
-    platformList.push_back(Platform(-400, GAME_HEIGHT, 300, GAME_HEIGHT / 10));
-
-    while (platformStartHeight > 0)
+    for(int i = 0 ; i < 10; i++)
     {
-        platformList.push_back(Platform(platformStartWidth, platformStartHeight, GAME_WIDTH - 2 * platformStartWidth - 69, GAME_HEIGHT / 10));
-        platformStartHeight -= GAME_HEIGHT / 10;
-        platformStartWidth += 100;
+        Tilebox tilebox = Tilebox(i * TILEBOX_SIZE, GAME_HEIGHT - TILEBOX_SIZE);
+        collisionObjects.push_back(tilebox.getRect());
     }
+    Tilebox tilebox = Tilebox(6 * TILEBOX_SIZE, GAME_HEIGHT - 2 * TILEBOX_SIZE);
+        collisionObjects.push_back(tilebox.getRect());
+    
+
 }
 
 void MarioClone::Game::clean()
