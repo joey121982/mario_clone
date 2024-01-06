@@ -1,3 +1,5 @@
+# CURRENT STATUS: VERY EARLY DEVELOPMENT
+
 # Mario Clone by [@joey12198](https://github.com/joey121982/) and [@cosminbrn](https://github.com/cosminbrn)
 
 ## Prerequisites
