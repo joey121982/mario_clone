@@ -1,5 +1,8 @@
 #include "definitions.hpp"
 
+/**
+ * @brief Handles events such as key presses and checks for movement
+*/
 void MarioClone::Game::handleEvents()
 {
     SDL_Event event;

@@ -1,5 +1,13 @@
 #include "definitions.hpp"
 
+/**
+ * @brief Checks if two rectangles are in line with each other
+ * 
+ * @param a The first rectangle
+ * @param b The second rectangle
+ * @return true 
+ * @return false 
+ */
 bool isInLine(SDL_Rect a, SDL_Rect b)
 {
     int marginoferror = 4;
@@ -10,6 +18,9 @@ bool isInLine(SDL_Rect a, SDL_Rect b)
     return true;
 }
 
+/**
+ * @brief Updates the game state
+*/
 void MarioClone::Game::update()
 {
     player.grounded = false;

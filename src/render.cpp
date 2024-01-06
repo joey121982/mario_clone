@@ -1,5 +1,8 @@
 #include "definitions.hpp"
 
+/**
+ * @brief Renders the game
+*/
 void MarioClone::Game::render()
 {
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
@@ -21,7 +24,7 @@ void MarioClone::Game::render()
     // How to render relative to player position:
     // platformRect.x = (platform.position.x - player.position.x + GAME_WIDTH / 2) * screensizeadjust;
     // platformRect.y = (platform.position.y - player.position.y + GAME_HEIGHT / 2) * screensizeadjust;
-       
+    
     for(auto object : collisionObjects)
     {
         SDL_Rect objectRect;

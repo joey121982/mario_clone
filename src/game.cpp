@@ -1,6 +1,12 @@
 #include "definitions.hpp"
 #include <iostream>
 
+
+/**
+ * @brief The amount of time it took to render the last frame
+*/
+float deltaTime = 0.0f;
+
 MarioClone::Game::Game()
 {
     isRunning = false;
@@ -11,6 +17,15 @@ MarioClone::Game::~Game()
     clean();
 }
 
+/**
+ * @brief Initializes the game window and renderer
+ * @param title The title of the window
+ * @param xpos The x position of the window
+ * @param ypos The y position of the window
+ * @param width The width of the window
+ * @param height The height of the window
+ * @param fullscreen Whether or not the window should be fullscreen
+*/
 void MarioClone::Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen)
 {
     int flags = 0;
@@ -76,6 +91,9 @@ void MarioClone::Game::clean()
     std::cout << "Game cleaned!" << std::endl;
 }
 
+/**
+ * @brief Checks if the game is running
+*/
 bool MarioClone::Game::running() 
 { 
     return isRunning;

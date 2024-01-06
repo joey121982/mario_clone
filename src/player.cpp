@@ -1,24 +1,40 @@
 #include "definitions.hpp"
 
-void MarioClone::Player::move(Orientation dir, float speed)
+/**
+ * @brief Moves the player in a given direction with a given speed
+ * 
+ * @param direction 
+ * @param speed 
+ */
+void MarioClone::Player::move(Orientation direction, float speed)
 {
-    orientation = dir;
-    if (dir == LEFT)
+    orientation = direction;
+    if (direction == LEFT)
     {
         position.x -= speed;
     }
-    else if (dir == RIGHT)
+    else if (direction == RIGHT)
     {
         position.x += speed;
     }
 }
 
+/**
+ * @brief Makes the player jump with a given speed
+ * 
+ * @param speed
+ */
 void MarioClone::Player::jump(float speed)
 {
     verticalVelocity = -speed * 1.5;
     grounded = false;   
 }
 
+/**
+ * @brief Returns the player's rectangle
+ * 
+ * @return SDL_Rect 
+ */
 SDL_Rect MarioClone::Player::getRect()
 {
     return playerRect;

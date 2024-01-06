@@ -31,7 +31,7 @@ namespace MarioClone
         public:
             Player();
             ~Player();
-            void move(Orientation dir, float speed);
+            void move(Orientation direction, float speed);
             void jump(float speed);
             SDL_Rect getRect();
 
@@ -74,41 +74,12 @@ namespace MarioClone
     public:
         Game();
         ~Game();
-        /**
-         * @brief Initializes the game window and renderer
-         * @param title The title of the window
-         * @param xpos The x position of the window
-         * @param ypos The y position of the window
-         * @param width The width of the window
-         * @param height The height of the window
-         * @param fullscreen Whether or not the window should be fullscreen
-        */
         void init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
-        
-        /**
-         * @brief Handles events such as key presses and checks for movement
-        */
         void handleEvents();
-        
-        /**
-         * @brief Updates the game state
-        */
         void update();
-        
-        /**
-         * @brief Renders the game
-        */
         void render();
-        
-        /**
-         * @brief Checks if the game is running
-        */
         bool running();
-
-        /**
-         * @brief The amount of time it took to render the last frame
-        */
-        float deltaTime = 0.0f;
+        float deltaTime;
     };
 }
 
