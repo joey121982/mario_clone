@@ -12,12 +12,14 @@
 #include <string>
 #include "utilities.hpp"
 
+using std::string;
+
 const int           GAME_WIDTH      = 1920;
 const int           GAME_HEIGHT     = 1080;
 const int           TILEBOX_SIZE    = 100;
 const float         PLAYER_WIDTH    = 45;
 const float         PLAYER_HEIGHT   = 90;
-const std::string   ASSET_PATH      = "assets/";
+const string        ASSET_PATH      = "assets/";
 
 
 namespace MarioClone
