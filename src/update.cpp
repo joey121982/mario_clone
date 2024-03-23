@@ -11,10 +11,13 @@
 bool isInLine(SDL_Rect a, SDL_Rect b)
 {
     int marginoferror = 4;
-    if(a.x + a.w < b.x + marginoferror)
-        return false;
-    if(a.x + marginoferror > b.x + b.w)
-        return false;
+    
+    // a is always the wider Rect
+    if(a.w > b.w) std::swap(a,b);
+
+    if(a.x + a.w + marginoferror < b.x) return false; // if a is to the left of b
+    if(a.x > b.x + b.w + marginoferror) return false; // if a is to the right of b
+
     return true;
 }
 
@@ -32,41 +35,42 @@ void MarioClone::Game::update()
     playerRect.w = PLAYER_WIDTH;
     playerRect.h = PLAYER_HEIGHT;
 
+    // dont let player fall through object
     for (auto &objectRect : collisionObjects)
     {
-        if (Utilities::checkCollision(playerRect, objectRect))
-        {
-            if (isInLine(objectRect, playerRect))
-            {
-                if (player.verticalVelocity > 0)
-                {
-                    player.position.y = objectRect.y - playerRect.h;
-                    player.verticalVelocity = 0;
-                    player.grounded = true;
-                }
-                else if (player.verticalVelocity < 0)
-                {
-                    player.position.y = objectRect.y + objectRect.h;
-                    player.verticalVelocity = 0;
-                }
+        if(!isInLine(playerRect, objectRect)) continue;
+        if(Utilities::checkCollision(playerRect, objectRect)) {
+            
+
+            if(player.verticalVelocity = 0) continue;
+
+            else if(player.verticalVelocity > 0 ) {
+                player.position.y = objectRect.y - playerRect.h;
+                player.verticalVelocity = 0;
+                player.grounded = true;
             }
-            else
-            {
-                if (player.position.x < objectRect.x)
-                {
-                    player.position.x = objectRect.x - playerRect.w;
-                }
-                else
-                {
-                    player.position.x = objectRect.x + objectRect.w;
-                }
+
+            else {
+                player.grounded = false;
             }
         }
     }
     
+    // player jump physics
     if(!player.grounded)
     {
-        player.position.y       += player.verticalVelocity  * deltaTime;
         player.verticalVelocity += GRAVITY                  * deltaTime;
+        player.position.y       += player.verticalVelocity  * deltaTime;
     }
+
+    if(player.grounded)
+    {
+    }
+
+    if(player.horizontalVelocity > 0)
+        player.horizontalVelocity -= GRAVITY * FRICTION_CONSTANT * deltaTime;
+    else
+        player.horizontalVelocity += GRAVITY * FRICTION_CONSTANT * deltaTime;
+
+    player.position.x += player.horizontalVelocity;
 }

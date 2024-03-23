@@ -6,6 +6,7 @@
 #endif
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -21,9 +22,15 @@ const float         PLAYER_WIDTH    = 45;
 const float         PLAYER_HEIGHT   = 90;
 const string        ASSET_PATH      = "assets/";
 
+const bool          DEBUG_MODE      = true;
 
 namespace MarioClone
 {
+    const float   GRAVITY           = 0.003;
+    const float   PLAYER_SPEED      = 0.75;
+    const float   MAX_PLAYER_SPEED  = 0.45;
+    const float   FRICTION_CONSTANT = 0.4;
+
     class Player
     {
         private:
@@ -37,7 +44,8 @@ namespace MarioClone
             void jump(float speed);
             SDL_Rect getRect();
 
-            float verticalVelocity = 0;
+            float verticalVelocity      = 0;
+            float horizontalVelocity    = 0;
             bool grounded = true;
 
             Vector2 position;
@@ -63,9 +71,6 @@ namespace MarioClone
 
         float   screensizeadjust;
         bool    isRunning;
-        
-        const float   GRAVITY           = 0.003;
-        const float   PLAYER_SPEED      = 0.75;
 
         SDL_Window*     window;
         SDL_Renderer*   renderer;

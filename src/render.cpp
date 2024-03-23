@@ -35,7 +35,7 @@ void MarioClone::Game::render()
         SDL_SetRenderDrawColor(renderer, 200, 200, 200, 255);
         SDL_RenderFillRect(renderer, &objectRect);
     }
-    std::cout << player.position.x << " " << player.position.y << std::endl;
+    std::cout << player.position.x << " " << player.position.y << " " << player.horizontalVelocity << " " << player.verticalVelocity << std::endl;
 
     SDL_RenderPresent(renderer);
 }

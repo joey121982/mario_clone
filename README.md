@@ -34,7 +34,8 @@ make
 
 ### Windows:
 
-First, you have to download SDL2 from [here](https://github.com/libsdl-org/SDL/releases/tag/release-2.28.5) and then copy the files inside the "x86_64-w64-mingw32" into a directory inside the root of the project, called "SDL2"
+First, you have to download SDL2 from [here](https://github.com/libsdl-org/SDL/releases/tag/release-2.28.5) (download the 
+SDL2-devel-2.28.5-mingw.zip) and then copy the files inside the "[...]-w64-mingw32" into a directory inside the root of the project, called "SDL2"
 It should look like this: 
 * mario_clone/SDL2/bin
 * mario_clone/SDL2/include

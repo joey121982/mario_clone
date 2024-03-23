@@ -9,13 +9,16 @@
 void MarioClone::Player::move(Orientation direction, float speed)
 {
     orientation = direction;
+
+    if(std::abs(horizontalVelocity) > MAX_PLAYER_SPEED) return;
+
     if (direction == LEFT)
     {
-        position.x -= speed;
+        horizontalVelocity -= speed * 0.002;
     }
     else if (direction == RIGHT)
     {
-        position.x += speed;
+        horizontalVelocity += speed * 0.002;
     }
 }
 

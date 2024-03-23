@@ -50,6 +50,7 @@ Makefile.in
 
 # Include libraries
 /SDL2
+/SDL2_ttf
 /include
 
 /.idea

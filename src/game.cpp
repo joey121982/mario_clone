@@ -45,7 +45,7 @@ void MarioClone::Game::init(const char* title, int xpos, int ypos, int width, in
         }
         else
         {
-            std::cerr << "Window failed to create with the following error: "<< SDL_GetError() << std::endl;
+            std::cerr << "Window failed to create with the following error: " << SDL_GetError() << std::endl;
         }
 
         renderer = SDL_CreateRenderer(window, -1, 0);
@@ -55,13 +55,31 @@ void MarioClone::Game::init(const char* title, int xpos, int ypos, int width, in
         }
         else
         {
-            std::cerr << "Renderer failed to create with the following error: "<< SDL_GetError() << std::endl;
+            std::cerr << "Renderer failed to create with the following error: " << SDL_GetError() << std::endl;
         }
 
         isRunning = true;
     }
     else
     {
+        std::cerr << "Initialization failed with the following error: " << SDL_GetError() << std::endl;
+        isRunning = false;
+    }
+
+    if (TTF_Init())
+    {
+        std::cout << "TTF initialized successfully!" << std::endl;
+
+        string sans_font_path = ASSET_PATH + "sans.ttf";
+        TTF_Font *sans_font = TTF_OpenFont(sans_font_path.c_str(), 24);
+        if(sans_font == NULL) {
+            std::cerr << "TTF: Sans font not loaded.";
+            if(DEBUG_MODE) isRunning = false;
+        }
+    }
+    else
+    {
+        std::cerr << "TTF failed to initialize with the following error: " << SDL_GetError() << std::endl;
         isRunning = false;
     }
 
