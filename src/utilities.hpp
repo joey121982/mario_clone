@@ -30,6 +30,8 @@ enum Orientation
 namespace Utilities
 {
     bool checkCollision(const SDL_Rect &A, const SDL_Rect &B);
+    bool isInLine(SDL_Rect a, SDL_Rect b);
+    bool isIntersectingOnlyHorizontally(SDL_Rect a, SDL_Rect b);
 }
 
 #endif // UTILITIES_HPP

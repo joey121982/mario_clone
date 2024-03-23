@@ -66,13 +66,13 @@ void MarioClone::Game::init(const char* title, int xpos, int ypos, int width, in
         isRunning = false;
     }
 
-    if (TTF_Init())
+    if (TTF_Init() == 0)
     {
         std::cout << "TTF initialized successfully!" << std::endl;
 
         string sans_font_path = ASSET_PATH + "sans.ttf";
-        TTF_Font *sans_font = TTF_OpenFont(sans_font_path.c_str(), 24);
-        if(sans_font == NULL) {
+        fonts.sans = TTF_OpenFont(sans_font_path.c_str(), 24);
+        if(fonts.sans == NULL) {
             std::cerr << "TTF: Sans font not loaded.";
             if(DEBUG_MODE) isRunning = false;
         }

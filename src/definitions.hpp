@@ -14,6 +14,10 @@
 #include "utilities.hpp"
 
 using std::string;
+    
+const int     screenwidth     = 1280;
+const int     screenheight    = 720;
+const bool    fullscreen      = false;
 
 const int           GAME_WIDTH      = 1920;
 const int           GAME_HEIGHT     = 1080;
@@ -24,11 +28,17 @@ const string        ASSET_PATH      = "assets/";
 
 const bool          DEBUG_MODE      = true;
 
+class Fonts
+{
+public:
+    TTF_Font *sans = nullptr;
+};
+
 namespace MarioClone
 {
     const float   GRAVITY           = 0.003;
-    const float   PLAYER_SPEED      = 0.75;
-    const float   MAX_PLAYER_SPEED  = 0.45;
+    const float   PLAYER_SPEED      = 0.6;
+    const float   MAX_PLAYER_SPEED  = 0.3;
     const float   FRICTION_CONSTANT = 0.4;
 
     class Player
@@ -77,6 +87,8 @@ namespace MarioClone
 
         Player player = Player();
         std::vector<SDL_Rect> collisionObjects;
+
+        Fonts fonts;
 
     public:
         Game();
